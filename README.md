@@ -2,30 +2,29 @@
 
 A comprehensive collection of **28 skills** for design, documentation, animation, 3D development, and Python desktop GUI applications — plus a **plugin manager** to auto-install and update them all.
 
-## 🚀 Quick Start
-
-### Option 1: Plugin Manager (Recommended)
+## 🚀 Install
 
 ```bash
-# The plugin is already registered in your OpenCode config!
-# Just run inside OpenCode:
-/skill-manager install
+npx @Joey-1123/opencode-v2-skills install
 ```
 
-This clones all skills from GitHub and sets them up automatically.
+This installs all skills to `~/.config/opencode/skills/`.
 
-### Option 2: Manual Install
+### Install a single skill
 
 ```bash
-# Clone and copy
-git clone https://github.com/Joey-1123/opencode-v2-skills.git
-cp -r opencode-v2-skills/skills/* ~/.config/opencode/skills/
+npx @Joey-1123/opencode-v2-skills install py-side6-gui-design
 ```
 
-### Option 3: Install Script
+### Inside OpenCode
 
-```bash
-cd opencode-v2-skills && bash install.sh
+```
+/skill-manager list          # Browse all skills
+/skill-manager install       # Install all
+/skill-manager install <name> # Install one
+/skill-manager search <term> # Search
+/skill-manager update        # Update all
+/skill-manager categories    # Browse by category
 ```
 
 ## 📊 Quick Stats
@@ -107,12 +106,12 @@ opencode-v2-skills/
 │   │   ├── scripts/
 │   │   ├── references/
 │   │   └── assets/
-│   ├── readme-generator/
-│   ├── technical-documentation-with-claude/
 │   └── ... (25 more)
+├── npm-package/
+│   ├── package.json           # @Joey-1123/opencode-v2-skills
+│   └── bin/cli.js             # npx CLI (list, install, search, update)
 ├── plugins/
-│   └── skill-manager.js       # Plugin for auto-management
-├── install.sh                 # One-command install script
+│   └── skill-manager.js       # OpenCode plugin wrapper
 ├── README.md
 └── LICENSE                    # MIT
 ```
