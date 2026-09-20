@@ -1,9 +1,9 @@
 {
-  "name": "@Joey-1123/opencode-v2-skills",
+  "name": "@joey-1123/opencode-v2-skills",
   "version": "1.0.0",
   "description": "Marketplace CLI for OpenCode V2 Skills — browse, install, search, update skills",
   "bin": {
-    "opencode-skills": "./bin/cli.js"
+    "opencode-skills": "bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js"
