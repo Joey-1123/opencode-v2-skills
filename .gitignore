@@ -6,3 +6,5 @@ __pycache__/
 Thumbs.db
 *.zip
 *.egg-info/
+node_modules/
+npm-package/node_modules/
