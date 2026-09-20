@@ -1,0 +1,57 @@
+/* Base QSS Theme for PySide6 Applications */
+
+/* Root */
+QWidget {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    font-size: 11pt;
+    color: #1E293B;
+    background-color: #F8FAFC;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #2563EB;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+}
+QPushButton:hover { background-color: #1D4ED8; }
+QPushButton:pressed { background-color: #1E40AF; }
+QPushButton:disabled { background-color: #94A3B8; }
+
+/* Inputs */
+QLineEdit, QTextEdit, QComboBox {
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 6px 12px;
+    background-color: white;
+}
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #2563EB;
+    border-width: 2px;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    width: 10px;
+    background: #F1F5F9;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: #94A3B8;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+/* Lists */
+QListWidget {
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: white;
+}
+QListWidget::item:selected {
+    background-color: #2563EB;
+    color: white;
+}
