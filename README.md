@@ -1,21 +1,54 @@
 # OpenCode V2 Skills
 
-A comprehensive collection of OpenCode skills for design, documentation, animation, 3D development, and Python desktop GUI applications.
+A comprehensive collection of **28 skills** for design, documentation, animation, 3D development, and Python desktop GUI applications — plus a **plugin manager** to auto-install and update them all.
 
-**157 total skills** — covering everything from web development to Python desktop apps.
+## 🚀 Quick Start
 
-## Quick Stats
+### Option 1: Plugin Manager (Recommended)
+
+```bash
+# The plugin is already registered in your OpenCode config!
+# Just run inside OpenCode:
+/skill-manager install
+```
+
+This clones all skills from GitHub and sets them up automatically.
+
+### Option 2: Manual Install
+
+```bash
+# Clone and copy
+git clone https://github.com/Joey-1123/opencode-v2-skills.git
+cp -r opencode-v2-skills/skills/* ~/.config/opencode/skills/
+```
+
+### Option 3: Install Script
+
+```bash
+cd opencode-v2-skills && bash install.sh
+```
+
+## 📊 Quick Stats
 
 | Metric | Count |
 |--------|-------|
-| **Total Skills** | 157 |
+| **Total Skills** | 28 |
 | **From freshtechbro/claudedesignskills** | 22 (MIT) |
 | **From ComposioHQ/awesome-claude-skills** | 1 (Apache 2.0) |
-| **Created for RingForge** | 1 |
-| **Created from scratch** | 2 |
-| **Universal (framework-agnostic)** | 1 |
+| **Original (Joey-1123)** | 3 (MIT) |
+| **Plugin** | 1 skill-manager |
 
-## Skill Categories
+## 🛠️ Plugin Commands
+
+Once installed, use these commands inside OpenCode:
+
+| Command | Description |
+|---------|-------------|
+| `/skill-manager install` | Clone all skills from GitHub repo |
+| `/skill-manager update` | Pull latest changes from repo |
+| `/skill-manager list` | Show installed skills count |
+
+## 📦 Skill Categories
 
 ### 🎨 Design & UI
 - `py-side6-gui-design` — Universal Python desktop GUI design (PySide6/PyQt)
@@ -28,12 +61,12 @@ A comprehensive collection of OpenCode skills for design, documentation, animati
 - `changelog-generator` — Transform git commits into user-facing release notes
 
 ### 🎬 Animation & Interaction
-- `animate` — Build animations from scratch with Emil Kowalski's philosophy
-- `motion-framer` — React/JS animation with spring physics, gestures, layout animations
+- `animate` — Build animations from scratch
+- `motion-framer` — React/JS animation with spring physics
 - `gsap-scrolltrigger` — Scroll-driven animations, timelines, parallax
-- `react-spring-physics` — Physics-based animations and gesture-driven interfaces
+- `react-spring-physics` — Physics-based animations and gesture interfaces
 - `animejs` — Timeline-based animations, SVG morphing, stagger effects
-- `lottie-animations` — After Effects animation rendering for web and React
+- `lottie-animations` — After Effects animation rendering for web
 - `review-animations` — Review animation code against craft standards
 - `improve-animations` — Audit and improve existing animation code
 - `animation-vocabulary` — Reverse-lookup glossary for animation effects
@@ -60,40 +93,43 @@ A comprehensive collection of OpenCode skills for design, documentation, animati
 ### 🧩 Components & Integration
 - `animated-component-libraries` — Pre-built animated React components
 - `web3d-integration-patterns` — Combining 3D and animation libraries
-- `react-three-fiber` — React Three Fiber patterns
 
 ### 🛠️ Tooling
 - `skill-creator` — Create, validate, and package OpenCode skills
 
-## Install All Skills
+## 📁 Repo Structure
 
-```bash
-# Clone this repo
-git clone https://github.com/Joey-1123/opencode-v2-skills.git
-
-# Copy skills to OpenCode
-cp -r opencode-v2-skills/skills/* ~/.config/opencode/skills/
+```
+opencode-v2-skills/
+├── skills/                    # All 28 skill directories
+│   ├── py-side6-gui-design/
+│   │   ├── SKILL.md
+│   │   ├── scripts/
+│   │   ├── references/
+│   │   └── assets/
+│   ├── readme-generator/
+│   ├── technical-documentation-with-claude/
+│   └── ... (25 more)
+├── plugins/
+│   └── skill-manager.js       # Plugin for auto-management
+├── install.sh                 # One-command install script
+├── README.md
+└── LICENSE                    # MIT
 ```
 
-Or install individually:
+## 🔧 Install the Plugin Manually
+
+If the plugin isn't auto-loaded:
 
 ```bash
-# Design
-cp -r skills/py-side6-gui-design ~/.config/opencode/skills/
-cp -r skills/modern-web-design ~/.config/opencode/skills/
-cp -r skills/skill-creator ~/.config/opencode/skills/
+# Copy plugin to OpenCode plugins directory
+cp plugins/skill-manager.js ~/.config/opencode/plugins/
 
-# Documentation
-cp -r skills/readme-generator ~/.config/opencode/skills/
-cp -r skills/technical-documentation-with-claude ~/.config/opencode/skills/
-cp -r skills/changelog-generator ~/.config/opencode/skills/
-
-# Animation
-cp -r skills/animate ~/.config/opencode/skills/
-# ... etc
+# Add to opencode.jsonc
+# "plugins": ["skill-manager"]
 ```
 
-## Skill Format
+## 📄 Skill Format
 
 All skills follow the [OpenCode skill format](https://docs.opencode.ai/skills):
 
@@ -105,30 +141,34 @@ skill-name/
 └── assets/           # Optional: Templates, stylesheets, icons
 ```
 
-## License
+## 📜 Changelog
 
-- `py-side6-gui-design`, `readme-generator`, `technical-documentation-with-claude` — **MIT** (created by Joey-1123)
+### v1.1.0 — Plugin Manager
+- Added `skill-manager` plugin for auto-install/update/list
+- Plugin registered in `opencode.jsonc`
+- `install.sh` script for easy setup
+
+### v1.0.0 — Initial Release
+- 22 skills from freshtechbro/claudedesignskills
+- 1 skill from ComposioHQ/awesome-claude-skills
+- 3 original skills (py-side6-gui-design, readme-generator, technical-documentation-with-claude)
+- Full scripts, references, and assets for all skills
+
+## 📝 License
+
+- Original skills (`py-side6-gui-design`, `readme-generator`, `technical-documentation-with-claude`, `skill-manager`) — **MIT**
 - freshtechbro skills — **MIT License** (from [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills))
 - ComposioHQ skills — **Apache 2.0** (from [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills))
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork this repository
 2. Create a new skill directory with `SKILL.md`
 3. Validate with `skill-creator/scripts/quick_validate.py`
 4. Submit a Pull Request
 
-## Changelog
-
-### v1.0.0 — Initial Release
-- 27 skills from freshtechbro/claudedesignskills
-- 1 skill from ComposioHQ/awesome-claude-skills
-- 3 original skills (py-side6-gui-design, readme-generator, technical-documentation-with-claude)
-- Full scripts, references, and assets for all skills
-
 ## Acknowledgments
 
-- [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills) — Original 22 design/3D/animation skills
+- [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills) — Original design/3D/animation skills
 - [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) — changelog-generator skill
-- [Anthropic](https://anthropic.com) — Claude Skills format specification
 - [OpenCode](https://opencode.ai) — OpenCode skill platform
